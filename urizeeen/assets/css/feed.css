@@ -1,0 +1,616 @@
+/* CSS styles for the main container and its contents */
+.container,
+.contents {
+    display: flex;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.contents,
+.menu {
+    height: 100%;
+}
+
+.container .menu {
+    /* Styles for the side menu */
+    width: 280px;
+    height: 100%;
+    margin-right: 10px;
+    border-right: var(--subtule-accent) solid 2px;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow-y: auto; */
+    position: relative;
+    transition: 0.5s width ease-in-out;
+}
+
+/* Styles for the body section of the side menu */
+.container .menu .body {
+    height: calc(100% - 100px);
+    height: 100%;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+/* Styles for the individual menu links in the side menu */
+.container .menu .menu-link {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    /* border: gold solid 2px; */
+    display: flex;
+    align-items: center;
+    transition: 0.5s background ease-in-out;
+    border-radius: 5px;
+    border: var(--primary-color) solid 1px;
+}
+
+/* Styles for the icons in the menu links */
+.container .menu .menu-link .icon {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+/* Styles for the active and hover states of the menu links */
+.container .menu .menu-link.active,
+.container .menu .menu-link:hover {
+    background: var(--primary-color);
+    color: var(--subtule-accent);
+}
+
+/* Styles for the active state of the menu link */
+.container .menu .menu-link.active {
+    font-weight: bolder;
+}
+
+/* Styles for the icon inside the menu link */
+.container .menu .menu-link .icon svg {
+    width: 40%;
+    height: 40%;
+    fill: currentColor;
+}
+
+/* Styles for the image inside the menu link */
+.container .menu .menu-link .icon img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/* Styles for the logo link in the side menu */
+.container .menu .logo {
+    /* border: red solid 2px; */
+    border: none;
+}
+
+/* Styles for the logo link on hover */
+.container .menu .logo:hover {
+    background: none;
+}
+
+/* Styles for the text inside the menu links */
+.container .menu .menu-link .text {
+    text-transform: capitalize;
+}
+
+/* Styles for hiding the side menu on smaller screens */
+.container .menu.hide {
+    width: 100px;
+}
+
+/* Styles for hiding the text inside the menu links on smaller screens */
+.container .menu.hide .menu-link .text {
+    display: none;
+}
+
+/* Styles for the icons inside the menu links on smaller screens */
+.container .menu.menu.hide .menu-link .icon {
+    width: 100%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container .menu {
+        width: 100px;
+    }
+
+    .container .menu .menu-link .text {
+        display: none;
+    }
+
+    .container .menu.menu .menu-link .icon {
+        width: 100%;
+    }
+}
+
+/* Styles for the toggle menu button */
+.container .toggleMenuButton {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background: var(--subtule-accent);
+    color: var(--text-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .container .toggleMenuButton {
+        display: flex;
+    }
+}
+
+/* Styles for the main content section */
+.contents {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Styles for the feeds section */
+.contents .feeds {
+    width: 100%;
+}
+
+/* Styles for the details section */
+.contents .details {
+    display: none;
+    width: 550px;
+    height: max-content;
+    /* border: red solid 3px; */
+    border-left: var(--subtule-accent) solid 2px;
+    border-bottom: var(--subtule-accent) solid 2px;
+    border-bottom-left-radius: 10px;
+    padding: 0.5rem;
+}
+
+/* Media query for larger screens to show the details section */
+@media screen and (min-width: 850px) {
+    .contents .details {
+        display: block;
+    }
+}
+
+/* Styles for the individual sections in the details section */
+.contents .details section {
+    background: var(--subtule-accent);
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 0.5rem;
+    min-height: 70px;
+    width: 100%;
+    position: relative;
+}
+
+/* Styles for the heading in the details section */
+.contents .details section .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Styles for the title in the details section */
+.contents .details section .heading .title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Styles for the icons in the details section */
+.contents .details section .heading .title svg {
+    margin-right: 3px;
+}
+
+/* Styles for the body in the details section */
+.contents .details section .body {
+    width: 100%;
+    position: relative;
+}
+
+/* Styles for the weather cards section */
+.weather-cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles for individual weather cards */
+.weather-cards .weather-card {
+    width: 32%;
+    padding: 0.5rem;
+    font-size: 12px;
+    border-radius: 10px;
+    margin: 0 1%;
+    cursor: pointer;
+}
+
+/* Styles for the active and hover states of the weather cards */
+.weather-cards .weather-card.active {
+    transform: scale(1.1);
+}
+
+.weather-cards .weather-card:hover,
+.weather-cards .weather-card.active {
+    background: var(--primary-color);
+    color: var(--subtule-accent);
+}
+
+/* Styles for the icon inside the weather cards */
+.weather-cards .weather-card .icon {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-cards .weather-card .icon svg {
+    width: 60%;
+    height: 60%;
+    fill: currentColor;
+}
+
+/* Styles for the text inside the weather cards */
+.weather-cards .weather-card .text p {
+    margin-bottom: 3px;
+    text-transform: capitalize;
+    font-size: smaller;
+}
+
+.weather-cards .weather-card .text .city {
+    font-weight: 800;
+    font-size: larger;
+}
+
+/* Styles for the news cards section */
+.news-cards {}
+
+/* Styles for individual news cards */
+.news-cards .news-card {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 70px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 0.3rem 0;
+}
+
+/* Styles for the image preview inside news cards */
+.news-cards .news-card .image-preview {
+    max-width: 100px;
+    height: 100%;
+    margin-right: 5px;
+}
+
+/* Styles for the image inside the image preview */
+.news-cards .news-card .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Styles for the text inside news cards */
+.news-cards .news-card .text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Styles for the feeds section */
+.feeds {
+    padding: 0.5rem 0;
+}
+
+/* Styles for individual feed posts */
+.feeds .feed {
+    width: clamp(95%, 500px, 95%);
+    min-height: 100px;
+    border: var(--subtule-accent) solid 2px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .feeds .feed {
+        width: 500px;
+    }
+}
+
+/* Styles for the header section of feed posts */
+.feeds .feed .feed-header {
+    height: 60px;
+    width: 100%;
+    /* background: var(--subtule-accent); */
+    border-bottom: var(--subtule-accent) solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+}
+
+/* Styles for the user info section in the feed header */
+.feeds .feed .feed-header .user-info {
+    display: flex;
+}
+
+/* Styles for the profile picture in the feed header */
+.feeds .feed .feed-header .user-info .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Styles for the image inside the profile picture */
+.feeds .feed .feed-header .user-info .profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Styles for the profile information in the feed header */
+.feeds .feed .feed-header .user-info .profile-info {}
+
+/* Styles for the profile name in the feed header */
+.feeds .feed .feed-header .user-info .profile-info .profile-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+/* Styles for the verified icon in the profile name */
+.feeds .feed .feed-header .user-info .profile-info .profile-name svg {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+}
+
+/* Styles for the visibility and distance information in the profile name */
+.feeds .feed .feed-header .user-info .profile-info .visiblity-and-distance,
+.feeds .feed .feed-header .user-info .profile-info .visiblity-and-distance span {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    margin-right: 7px;
+    text-transform: lowercase;
+    position: relative;
+}
+
+/* Styles for the dot separator in the visibility and distance information */
+.feeds .feed .feed-header .user-info .profile-info .visiblity-and-distance span::after {
+    content: ".";
+    font-size: large;
+    display: block;
+    /* color: red; */
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    padding-left: 5px;
+}
+
+/* Styles for the icons in the visibility and distance information */
+.feeds .feed .feed-header .user-info .profile-info .visiblity-and-distance span svg {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+/* Styles for the feed posted information in the profile info */
+.feeds .feed .feed-header .user-info .profile-info .feed-posted {
+    font-size: x-small;
+    margin: 3px 0;
+}
+
+/* Styles for the feed menu section */
+.feed .feed-menu {
+    position: relative;
+}
+
+/* Styles for the icons in the feed menu */
+.feed .feed-menu .icon {
+    width: 22px;
+    height: 100%;
+}
+
+/* Styles for the icons inside the feed menu */
+.feed .feed-menu .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+/* Styles for the feed body section */
+.feeds .feed .feed-body {
+    padding: 0.5rem;
+}
+
+/* Styles for the caption in the feed body */
+.feeds .feed .feed-body .caption {
+    word-break: keep-all;
+    margin-bottom: 10px;
+}
+
+/* Styles for the feed media section */
+.feeds .feed .feed-body .feed-medias {
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+
+/* Styles for individual media items in the feed */
+.feeds .feed .feed-body .feed-medias .feed-media {
+    width: 100%;
+    margin-bottom: 10px;
+    /* height: 300px; */
+    border: var(--subtule-accent) solid 2px;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    flex: 0 0 auto;
+    /* height: 100px; */
+    max-height: 300px;
+    position: relative;
+}
+
+/* Styles for the images inside the media items */
+.feeds .feed .feed-body .feed-medias .feed-media img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    max-width: 100%;
+    max-width: 100%;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+/* Styles for the videos inside the media items */
+.feeds .feed .feed-body .feed-medias .feed-media video {
+    height: 100%;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+/* Styles for the footer section of feed posts */
+.feed-footer {
+    /* min-height: 100px; */
+    border-top: var(--subtule-accent) solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+/* Styles for the icons and text in the footer */
+.feed-footer .footer-icon {
+    /* background: red; */
+    height: 80%;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .feed-footer .footer-icon {
+        flex-direction: column;
+        margin: 0 10px;
+        justify-content: center;
+    }
+}
+
+/* Styles for the icons inside the footer */
+.feed-footer .footer-icon .icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the icons inside the footer */
+.feed-footer .footer-icon .icon svg {
+    width: 60%;
+    height: 60%;
+    fill: currentColor;
+}
+
+/* Styles for the text inside the footer */
+.feed-footer .footer-icon .text {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: x-small;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Styles for the loading section */
+.feeds .loading {
+    margin: 20px 0;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the loading icon */
+.feeds .loading svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    margin-right: 4px;
+}
+
+/* Styles for the start of loading animation */
+.loading.start {
+    height: 95%;
+}
+
+/* Styles for the spin animation */
+.spin {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Styles for the footer section */
+footer {
+    margin: 5px 0;
+}
+
+/* Styles for the links section in the footer */
+footer .links {
+    margin-bottom: 10px;
+}
+
+/* Styles for individual links in the footer */
+footer .links .link {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+}
+
+/* Styles for the period after links in the footer */
+footer .links .link::after {
+    content: '.';
+}

@@ -1,0 +1,578 @@
+/* Global Styles */
+body {
+    /* Hide horizontal overflow */
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    /* Set navbar width to 100% and height to 12.5vh */
+    width: 100%;
+    height: 12.5vh;
+    /* Background color using a CSS variable */
+    background: var(--subtule-accent);
+    /* Flexbox setup */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    /* Navbar fixed position at the top of the viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Higher z-index to place it above other elements */
+    z-index: 1028;
+}
+
+/* Navbar Logo Styles */
+.navbar .logo {
+    /* Uppercase text with bold font */
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: larger;
+    /* Text color using a CSS variable */
+    color: var(--accent-color);
+}
+
+/* Navbar Responsive Icon Styles */
+.navbar .nav-responsive-icon {
+    /* Display none for now (for responsive design) */
+    display: none;
+}
+
+/* Navbar Menu Styles */
+.navbar .nav-menu {
+    /* Flexbox setup */
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Menu Item Styles */
+.navbar .nav-menu .nav-item {
+    /* Margin and minimum width for menu items */
+    margin: 0 5px;
+    min-width: 100px;
+    /* Height and flexbox setup for menu items */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Transform menu item text to capitalize */
+    text-transform: capitalize;
+}
+
+/* Navbar Call-to-Action (C2A) Menu Item Styles */
+.navbar .nav-menu .nav-item.c2a {
+    /* Background color and text color for C2A menu item */
+    background: var(--accent-color);
+    color: var(--background);
+    /* Rounded corners and fixed width for C2A menu item */
+    border-radius: 20px;
+    width: 150px;
+}
+
+/* Navbar Call-to-Action (C2A) Link Styles */
+.navbar .nav-menu .nav-item.c2a a {
+    /* Margin and inline block display for C2A link */
+    margin: 0 5px;
+    display: inline-block;
+    /* Text color for C2A link */
+    color: var(--background);
+}
+
+/* Masthead Styles */
+.masthead {
+    /* Full width and height 400px with a top margin of 12.5vh */
+    width: 100%;
+    height: 400px;
+    margin-top: 12.5vh;
+    /* Relative position to keep children elements in place */
+    position: relative;
+    /* Bottom margin for spacing between sections */
+    margin-bottom: 20px;
+}
+
+/* Masthead Image Styles */
+.masthead img {
+    /* Full width and height to cover the container */
+    width: 100%;
+    height: 100%;
+    /* Ensure the image covers the container */
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* Masthead Moon Styles */
+.masthead .moon {
+    /* Absolute position for positioning the moon element */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    /* Rounded border for moon shape */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /* Box shadow to create a visual effect */
+    box-shadow: -1px 0px 10px 3px var(--background);
+    /* Animation to rotate the moon element */
+    animation: spin 5s linear infinite;
+}
+
+/* Keyframes for Moon Spin Animation */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Masthead Moon Image Styles */
+.masthead .moon img {
+    /* Full width and height to fit the moon container */
+    width: 100%;
+    height: 100%;
+    /* Ensure the moon image fits the container */
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/* Masthead Cover Styles */
+.masthead .cover {
+    /* Absolute position to cover the masthead with a semi-transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Semi-transparent black background */
+    background: rgb(0,0,0, 0.7);
+    /* Text color for the cover contents */
+    color: var(--background);
+    /* Full width and height to cover the masthead */
+    width: 100%;
+    height: 100%;
+    /* Flexbox setup to center content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Text alignment center */
+    text-align: center;
+    /* Higher z-index to place it above other elements */
+    z-index: 20;
+}
+
+/* Masthead Cover Contents Styles */
+.masthead .cover .contents {
+    /* Position relative for children elements */
+    position: relative;
+    /* Full width and maximum height to ensure content fits */
+    width: 100%;
+    max-height: 100%;
+    /* Overflow hidden to hide any overflowing content */
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+}
+
+/* Masthead Cover Title Styles */
+.masthead .cover .contents .title {
+    /* Text color using a CSS variable */
+    color: var(--accent-color);
+    /* Transform title text to uppercase */
+    text-transform: uppercase;
+    /* Letter spacing for styling */
+    letter-spacing: 2px;
+    /* Font size calculation for responsive design */
+    font-size: calc(100% + 3rem);
+    /* Margin at the bottom for spacing */
+    margin-bottom: 10px;
+}
+
+/* Masthead Cover Subtitle Styles */
+.masthead .cover .contents .subText {
+    /* Font size calculation for responsive design */
+    font-size: calc(100% + 1rem);
+    /* Transform subtitle text to uppercase */
+    text-transform: uppercase;
+    /* Margin at the bottom for spacing */
+    margin-bottom: 20px;
+}
+
+/* Masthead Cover Button Group Styles */
+.masthead .cover .contents .button-group {
+    /* Flexbox setup to center buttons */
+    display: flex;
+    align-items: center;
+    width: max-content;
+    /* Margin to center the button group */
+    margin: 0 auto;
+}
+
+/* Masthead Cover Buttons and Links Styles */
+.masthead .cover .contents .button-group button,
+.masthead .cover .contents .button-group a {
+    /* Margin between buttons and links */
+    margin: 0 4px;
+    text-transform: capitalize;
+    /* Text color for buttons and links */
+    color: var(--background);
+    /* Font weight for styling */
+    font-weight: bold;
+    /* Letter spacing for styling */
+    letter-spacing: 1.5px;
+}
+
+/* Masthead Cover C2A Button Styles */
+.masthead .cover .contents .button-group button,
+.masthead .cover .contents .button-group .btn {
+    /* Background color for C2A button */
+    background: var(--secondary-color);
+    color: var(--background);
+    width: 200px;
+}
+
+/* Masthead Cover C2A Link Styles */
+.masthead .cover .contents .button-group a {
+    /* Text color for C2A link */
+    color: var(--accent-color);
+}
+
+/* Masthead Cover C2A Link Hover Styles */
+.masthead .cover .contents .button-group a:hover {
+    /* Underline effect on C2A link hover */
+    text-decoration: underline;
+}
+
+/* Masthead Cover Button Hover Styles */
+.masthead .cover .contents .button-group .btn:hover {
+    /* Remove underline on button hover */
+    text-decoration: none;
+}
+
+/* About Section Styles */
+.txt-gold {
+    /* Text color using a CSS variable */
+    color: var(--accent-color);
+}
+
+.about {
+    /* Flexbox setup to center content */
+    display: flex;
+    justify-content: center;
+    /* Margin at the top and bottom for spacing */
+    margin: 10px 0;
+}
+
+.about .left,
+.about .right {
+    /* Width and margin for left and right sections */
+    width: 45%;
+    margin: 0 5px;
+}
+
+.about .left {
+    /* Maximum height for left section */
+    max-height: 350px;
+}
+
+.about .left img {
+    /* Full width and height to fit the container */
+    width: 100%;
+    height: 100%;
+    /* Ensure the image fits the container */
+    object-fit: contain;
+}
+
+.about .right .title {
+    /* Padding, border, and margin for right section title */
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.about .right .contents {
+    /* Line height for the content paragraphs */
+    line-height: 30px;
+}
+
+/* Signup Banner Styles */
+.signup-banner {
+    /* Position relative for the banner container */
+    position: relative;
+    /* Height for the banner */
+    height: 250px;
+}
+
+.signup-banner img {
+    /* Full width and height to cover the container */
+    width: 100%;
+    height: 100%;
+    /* Ensure the image covers the container */
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.signup-banner .contents {
+    /* Absolute position to cover the signup banner */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Full width and height to cover the banner */
+    width: 100%;
+    height: 100%;
+    /* Semi-transparent black background */
+    background: rgb(0,0,0, 0.7);
+    /* Text color for the banner contents */
+    color: var(--background);
+    /* Flexbox setup to center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Text alignment center */
+    text-align: center;
+}
+
+.signup-banner .contents .head :is(h1,h2,h3,h4,h5,h6, p) {
+    /* Margin and text transformation for banner headings and paragraphs */
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+
+.signup-banner .contents .head :is(h1,h2,h3,h4,h5,h6) {
+    /* Font size for banner headings */
+    font-size: xx-large;
+}
+
+.signup-banner .contents .head :is(p) {
+    /* Font size for banner paragraphs */
+    font-size: 1rem;
+}
+
+.signup-banner .contents .body .button-group {
+    /* Flexbox setup to center buttons */
+    display: flex;
+    margin-top: 10px;
+}
+
+.signup-banner .contents .body .button-group button,
+.signup-banner .contents .body .button-group .btn,
+.signup-banner .contents .body .button-group a {
+    /* Margin and background color for buttons and links */
+    margin: 0 5px;
+    background: var(--accent-color);
+    /* Text color for buttons and links */
+    color: var(--background);
+    /* Font weight for styling */
+    font-weight: bold;
+    /* Letter spacing for styling */
+    letter-spacing: 1.5px;
+}
+
+.signup-banner .contents .body .button-group button:last-of-type,
+.signup-banner .contents .body .button-group .btn:last-of-type,
+.signup-banner .contents .body .button-group a:last-of-type {
+    /* Background color for the last button or link in the group */
+    background: var(--secondary-color);
+}
+
+/* Footer Styles */
+.footer {
+    /* Background color using a CSS variable */
+    background: var(--text-color);
+    /* Text color using a CSS variable */
+    color: var(--background);
+    /* Margin at the top for spacing */
+    margin-top: 10px;
+}
+
+.footer .copyright {
+    /* Background color and text color for footer copyright section */
+    background: var(--background);
+    color: var(--text-color);
+    /* Padding for spacing */
+    padding: 1rem;
+    /* Text alignment center */
+    text-align: center;
+    /* Font weight for styling */
+    font-weight: bold;
+}
+
+.footer .row {
+    /* Flexbox setup to center content */
+    display: flex;
+    justify-content: center;
+    /* Padding for spacing */
+    padding: 1rem;
+}
+
+.footer .col {
+    /* Width and margin for footer columns */
+    width: 30%;
+    margin: 0 1%;
+}
+
+.footer .col .heading {
+    /* Text transformation, padding, border, and margin for footer column headings */
+    text-transform: capitalize;
+    padding: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background);
+}
+
+.footer .col .body ul {
+    /* Remove default list styles */
+    list-style: none;
+}
+
+.footer .col .body ul li {
+    /* List item margin (if needed) */
+    /* margin: 5px 0; */
+}
+
+.footer .col .body ul li a {
+    /* Text color for footer links */
+    color: var(--accent-color);
+    /* Text transformation to capitalize */
+    text-transform: capitalize;
+    /* Transition effect for link hover */
+    transition: 0.5s margin ease-in-out;
+    /* Padding for spacing */
+    padding: 0.5rem;
+    /* Display inline block for proper link placement */
+    display: inline-block;
+}
+
+.footer .col .body ul li a:hover {
+    /* Margin to create a hover effect on the links */
+    margin-left: 5px;
+}
+
+.footer .info .title {
+    /* Text color using a CSS variable */
+    color: var(--accent-color);
+    /* Font size for footer info title */
+    font-size: x-large;
+    /* Text transformation to uppercase */
+    text-transform: uppercase;
+    /* Font weight for styling */
+    font-weight: bold;
+    /* Padding for spacing */
+    padding: 0.5rem;
+}
+
+.footer .info .description {
+    /* Line height for footer info description */
+    line-height: 25px;
+}
+
+.footer .socials {
+    /* Flexbox setup to center social icons */
+    display: flex;
+    /* Margin at the top for spacing */
+    margin-top: 10px;
+    /* Flex wrap to move icons to a new line if needed */
+    flex-wrap: wrap;
+}
+
+.footer .socials .social {
+    /* Width, height, border radius, and margin for social icons */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    /* Background color for social icons */
+    background: var(--background);
+    /* Text color for social icons */
+    color: var(--text-color);
+    /* Flexbox setup to center social icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Transition effect for social icon hover */
+    transition: 0.5s transform ease-in-out;
+}
+
+.footer .socials .social svg {
+    /* Size of social icons */
+    width: 60%;
+    height: 60%;
+}
+
+.footer .socials .social:hover {
+    /* Scale effect on social icon hover */
+    transform: scale(1.1);
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width:768px) {
+    /* Styles for screens with a maximum width of 768 pixels */
+    .about {
+        /* Flexbox setup to stack about sections vertically on small screens */
+        flex-direction: column;
+        width: 100%;
+        /* Text alignment center for about section */
+        text-align: center;
+    }
+
+    .about .right,
+    .about .left {
+        /* Width and margin for about sections on small screens */
+        width: 100%;
+        /* Maximum height for about section on small screens */
+        height: max-content;
+        /* Margin for spacing between about sections on small screens */
+        margin: 5px 0;
+    }
+
+    .about .left {
+        /* Height for about section image on small screens */
+        height: 350px;
+    }
+
+    .about .right .contents {
+        /* Reduced padding for about section contents on small screens */
+        padding: 0.5rem;
+    }
+
+    .footer {
+        /* Text alignment center for footer on small screens */
+        text-align: center;
+    }
+
+    .footer .row {
+        /* Flexbox setup to stack footer columns vertically on small screens */
+        flex-direction: column;
+    }
+
+    .footer .col {
+        /* Width and margin for footer columns on small screens */
+        width: 100%;
+        margin: 1% 0;
+    }
+
+    .footer .socials {
+        /* Flexbox setup to center social icons on small screens */
+        justify-content: center;
+    }
+
+    .navbar .nav-menu .nav-item {
+        /* Hide navbar menu items on small screens */
+        display: none;
+    }
+
+    .navbar .nav-menu .nav-item.c2a {
+        /* Display call-to-action menu item on small screens */
+        display: flex;
+    }
+
+    .masthead .cover .contents .button-group {
+        /* Flex direction to stack buttons vertically on small screens */
+        flex-direction: column;
+    }
+
+    .masthead .cover .contents .button-group button,
+    .masthead .cover .contents .button-group a {
+        /* Margin and auto placement for buttons on small screens */
+        margin: 10px auto;
+    }
+}

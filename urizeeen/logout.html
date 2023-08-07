@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+
+    <!-- Importing the functions.js script -->
+    <script src="assets/js/functions.js"></script>
+
+    <!-- JavaScript code to check if user data is available as a cookie and redirect to login page if not found -->
+    <script>
+        const userDataJson = getCookie('userDetails');
+        if (!userDataJson) {
+            // If user data is not available, redirect to login.html
+            window.location.href = 'login.html';
+        }
+    </script>
+
+</head>
+<body>
+    
+    <h1>Logging out....</h1>
+
+    <!-- JavaScript code to delete all cookies -->
+    <script>
+        deleteAllCookies();
+    </script>
+
+</body>
+</html>

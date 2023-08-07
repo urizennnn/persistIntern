@@ -1,0 +1,132 @@
+/* Global styles for all elements */
+* {
+    /* Remove default margin and padding for all elements */
+    margin: 0;
+    padding: 0;
+    /* Box-sizing property for consistent box model calculations */
+    box-sizing: border-box;
+}
+
+/* CSS variables for custom colors */
+:root {
+    /* Primary color */
+    --primary-color: #1da1f2;
+    /* Secondary color */
+    --secondary-color: #17bf63;
+    /* Accent color */
+    --accent-color: #ffad1f;
+    /* Background color */
+    --background: #f5f8fa;
+    /* Text color */
+    --text-color: #333333;
+    /* Subtle accent color */
+    --subtule-accent: #e1e8ed;
+    /* Link color */
+    --link-color: #0f91d0;
+    /* Danger color */
+    --danger-color: red;
+    /* Success color */
+    --success-color: green;
+}
+
+/* Styles for the HTML element */
+html {
+    /* Set the HTML element height to 100% */
+    height: 100%;
+}
+
+/* Styles for the body element */
+body {
+    /* Font family for the entire body */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Font size for the entire body */
+    font-size: 14px;
+    /* Letter spacing for the entire body */
+    letter-spacing: 1px;
+    /* Set the body height to 100% */
+    height: 100%;
+    /* Background color using a CSS variable */
+    background: var(--background);
+    /* Text color using a CSS variable */
+    color: var(--text-color);
+}
+
+/* Styles for anchor (link) elements */
+a {
+    /* Remove default text decoration for links */
+    text-decoration: none;
+    /* Text color using a CSS variable */
+    color: var(--link-color);
+}
+
+/* Styles for classes related to failure or errors */
+.text-fail,
+.txt-fail,
+.error-text,
+.txt-error {
+    /* Text color using the danger color CSS variable with important */
+    color: var(--danger-color) !important;
+}
+
+.bg-fail,
+.bg-error {
+    /* Background color using the danger color CSS variable */
+    background: var(--danger-color);
+    /* Text color using the subtle accent color CSS variable */
+    color: var(--subtule-accent);
+}
+
+/* Styles for text centering */
+.text-center {
+    /* Center-align text */
+    text-align: center;
+}
+
+/* Styles for bold text */
+.text-bold {
+    /* Set font weight to bold */
+    font-weight: bold;
+}
+
+/* Styles for capitalizing text */
+.text-capitalize {
+    /* Text transformation to capitalize */
+    text-transform: capitalize;
+}
+
+/* Styles for display properties */
+.display-none {
+    /* Set display to none with important */
+    display: none !important;
+}
+
+.display-block {
+    /* Set display to block with important */
+    display: block !important;
+}
+
+.display-flex {
+    /* Set display to flex with important */
+    display: flex !important;
+}
+
+/* Styles for buttons */
+button,
+.btn {
+    /* Remove default outline on button elements */
+    outline: none;
+    /* Background color using the background color CSS variable */
+    background: var(--background);
+    /* Remove default border on button elements */
+    border: none;
+    /* Set width of buttons */
+    width: 150px;
+    /* Set height of buttons */
+    height: 45px;
+    /* Border radius for rounded corners */
+    border-radius: 3px;
+    /* Flexbox setup to center content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

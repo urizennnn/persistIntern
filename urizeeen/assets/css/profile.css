@@ -1,0 +1,131 @@
+/* Styles for the .contents class within .container */
+.container .contents {
+    /* Display block for the .contents class */
+    display: block;
+}
+
+/* Styles for the .hero section */
+.hero {
+    /* Background color using a CSS variable */
+    background: var(--subtule-accent);
+    /* Height for the .hero section */
+    height: 300px;
+    /* Width of 98% and centered horizontally */
+    width: 98%;
+    margin: 10px auto;
+    /* Border radius for rounded corners */
+    border-radius: 10px;
+    /* Box shadow effect */
+    box-shadow: 10px -5px 10px 5px var(--text-color);
+    /* Flexbox setup to center content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Font size and weight */
+    font-size: x-large;
+    font-weight: bold;
+    /* Text transformation to uppercase */
+    text-transform: uppercase;
+    /* Text alignment center */
+    text-align: center;
+}
+
+/* Styles for section elements */
+section {
+    /* Margin at the top and bottom for spacing */
+    margin: 20px 0;
+    /* Padding at the left and right for spacing */
+    padding: 0 20px;
+}
+
+/* Styles for the .title class within a section */
+section .title {
+    /* Text transformation to capitalize */
+    text-transform: capitalize;
+    /* Font weight for styling */
+    font-weight: bold;
+    /* Padding at the top and bottom for styling */
+    padding: 1rem;
+    padding-left: 0;
+    /* Border at the top and bottom for styling */
+    border-top: 2px solid var(--subtule-accent);
+    border-bottom: 2px solid var(--subtule-accent);
+}
+
+/* Styles for the svg element within .title class */
+section .title svg {
+    /* Width and height for the svg icon */
+    width: 20px;
+    height: 20px;
+}
+
+/* Styles for the .input class within a section body */
+section .body .input {
+    /* Width of 49% and displayed inline-flex */
+    width: 49%;
+    display: inline-flex;
+    /* Flex direction to stack elements vertically */
+    flex-direction: column;
+    /* Margin at the bottom for spacing */
+    margin-bottom: 10px;
+    /* Margin at the top and bottom for spacing */
+    margin: 10px 0;
+}
+
+/* Styles for the label element within .input class */
+section .body .input label {
+    /* Text transformation to capitalize */
+    text-transform: capitalize;
+    /* Font weight for styling */
+    font-weight: bold;
+}
+
+/* Styles for the input and select elements within .input class */
+section .body .input input,
+section .body .input select {
+    /* Width of 100% to fill the container */
+    width: 100%;
+    /* Margin at the top and bottom for spacing */
+    margin: 5px 0;
+    /* Height of 40px for inputs and selects */
+    height: 40px;
+    /* Remove default input and select styles */
+    outline: none;
+    border: none;
+    /* Padding for spacing within inputs and selects */
+    padding: 0 1rem;
+    /* Disable pointer events on inputs and selects */
+    pointer-events: none;
+}
+
+/* Styles for the select element within .input class in the .sharedActivities section */
+.sharedActivities .body .input select {
+    /* Increased height for the select element */
+    height: 120px;
+}
+
+/* Styles for the .submit-button class within the #intrestForm ID */
+#intrestForm .submit-button {
+    /* Text alignment right */
+    text-align: right;
+    /* Display block to take up full width */
+    display: block;
+    /* Width of 100% */
+    width: 100%;
+    /* Margin at the bottom for spacing */
+    margin-bottom: 20px;
+}
+
+/* Styles for the button element within the .submit-button class in the #intrestForm ID */
+#intrestForm .submit-button button {
+    /* Background color using a CSS variable */
+    background: var(--primary-color);
+    /* Text color using a CSS variable */
+    color: var(--background);
+    /* Text alignment right */
+    text-align: right;
+    /* Width of 250px */
+    width: 250px;
+    /* Margin on the left to shift the button to the right */
+    margin-left: calc(100% - 250px);
+}

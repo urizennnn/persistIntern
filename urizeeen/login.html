@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="assets/js/functions.js"></script>
+
+    <script>
+        const userDataJson = getCookie('userDetails');
+        if (userDataJson )
+        {
+            window.location.href = 'profile.html';
+        }
+
+    </script>
+
+	<link rel="stylesheet" href="assets/css/login.css">
+    <script src="http://localhost/@itms/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<!-- <div class="img" style="background-image: url(images/bg-1.jpg);"> -->
+                            <img src="http://localhost/projects/my-form-validation-projects-test/login-form-14/login-form-14/images/bg-1.jpg" class="img" alt="">
+			      <!-- </div> -->
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign In</h3>
+			      		</div>
+			      	</div>
+                    <form action="#" class="signin-form">
+                        <div class="form-group mb-3">
+                            <label class="label" for="name">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name..." required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                        </div>
+
+                    </form>
+		          <!-- <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p> -->
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script>
+
+        document.querySelector('form').addEventListener('submit', (event)=>{
+
+            event.preventDefault();
+
+            let userName = document.getElementById("name").value;
+            let userUsername = document.getElementById("username").value;
+            let userPassword = document.getElementById("password").value;
+
+            const userDetails = {
+                name: userName,
+                username: userUsername,
+                password: password,
+            };
+
+            const userDetailsJSON = JSON.stringify(userDetails);
+            document.cookie = `userDetails=${userDetailsJSON}; expires=Thu, 31 Dec 2023 23:59:59 UTC; path=/`;
+            window.location.href = 'intrest-form.html';
+
+        });
+
+    </script>
+
+	</body>
+</html>
+
